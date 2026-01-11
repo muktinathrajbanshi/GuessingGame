@@ -2,13 +2,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Guessing Number Game!</title>
   </head>
   <body>
     <main>
       <div class="welcomeScreen">
         <h2>Guess the Random Number Between 1-100</h2>
-        <img src="" alt="" />
+        <img
+          src="./images/guessImg.jpg"
+          alt="guessing image"
+          width="500px"
+          height="500px"
+        />
 
         <section class="eventSection">
           <p>Select the Difficulty</p>
@@ -41,6 +47,10 @@
           <div class="info">
             <p>Number of previous attempts</p>
             <span id="attempts"> 0 </span>
+          </div>
+          <div class="info">
+            <p>Number of previous guesses</p>
+            <span id="guesses"> 0 </span>
           </div>
         </section>
       </div>
