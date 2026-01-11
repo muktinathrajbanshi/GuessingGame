@@ -7,15 +7,15 @@
   </head>
   <body onload="init()">
     <main>
-      <div class="welcomeScreen">
+      <div id="welcomeScreen">
         <h2>Guess the Random Number Between 1-100</h2>
         <img src="./images/guessImg.png" alt="guessing image" />
 
         <section class="eventSection">
           <p>Select the Difficulty</p>
           <div class="button-wrapper">
-            <button>Easy: 10 attempts</button>
-            <button>Hard: 10 attempts</button>
+            <button onclick="easyMode()">Easy: 10 attempts</button>
+            <button onclick="hardMode()">Hard: 10 attempts</button>
           </div>
         </section>
       </div>

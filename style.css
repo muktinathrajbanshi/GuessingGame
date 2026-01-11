@@ -115,7 +115,7 @@ button:last-child {
 /* our game area  */
 
 #gameArea {
-  height: 100vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
