@@ -1,5 +1,6 @@
 let computerGuess;
 let userGuess = [];
+let userNumberUpdate = document.getElementById("textOutput");
 
 const init = () => {
     computerGuess = Math.floor(Math.random() * 100);
@@ -11,6 +12,20 @@ const init = () => {
 const startGame = () => {
     document.getElementById("welcomeScreen").style.display = "none";
     document.getElementById("gameArea").style.display = "block";
+}
+
+// main logic of our app
+
+const compareGuess = () => {
+    const userNumber = Number(document.getElementById("inputBox").value);
+    userGuess = [...userGuess, userNumber];
+    document.getElementById("guesses").innerHTML = userGuess; 
+
+    // check the value low or high 
+    if(userNumber > compareGuess) {
+
+    }
+
 }
 
 const easyMode = () => {

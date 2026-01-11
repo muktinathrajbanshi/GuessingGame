@@ -30,11 +30,12 @@
         <section>
           <h3>Your Guess</h3>
           <input
-            type="text"
+            type="number"
             id="inputBox"
             min="1"
             max="100"
             placeholder="Enter Your Number"
+            onchange="compareGuess()"
           />
         </section>
 

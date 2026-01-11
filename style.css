@@ -115,7 +115,7 @@ button:last-child {
 /* our game area  */
 
 #gameArea {
-  height: 35vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -146,6 +146,11 @@ input {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  padding: 0 2.5rem;
+}
+
+.info p {
+  font-size: 2.5rem;
 }
 
 .info span {
