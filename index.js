@@ -1,6 +1,7 @@
 let computerGuess;
 let userGuess = [];
-let userNumberUpdate = document.getElementById("textOutput");
+let userGuessUpdate = document.getElementById("textOutput");
+let userNumberUpdate = document.getElementById("inputBox");
 
 const init = () => {
     computerGuess = Math.floor(Math.random() * 100);
@@ -17,17 +18,18 @@ const startGame = () => {
 // main logic of our app
 
 const compareGuess = () => {
+
     const userNumber = Number(document.getElementById("inputBox").value);
     userGuess = [...userGuess, userNumber];
     document.getElementById("guesses").innerHTML = userGuess; 
 
     // check the value low or high 
     if(userNumber > computerGuess) {
-        userNumberUpdate.innerHTML = "Your guess is High 😮";
+        userGuessUpdate.innerHTML = "Your guess is High 😮";
     } else if (userNumber < computerGuess) {
-        userNumberUpdate.innerHTML = "Your guess is Low 😌";
+        userGuessUpdate.innerHTML = "Your guess is Low 😌";
     } else {
-       userNumberUpdate.innerHTML = "It's Correct 😀";
+       userGuessUpdate.innerHTML = "It's Correct 😀";
     }
 
 }
