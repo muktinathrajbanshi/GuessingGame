@@ -29,6 +29,7 @@ const newGameBegin = () => {
 // start new game
 
 const startNewGame = () => {
+    start.play();
     document.getElementById("newGameButton").display = "inline";
     userNumberUpdate.setAttribute("disabled", true);
 }
@@ -43,11 +44,9 @@ const compareGuess = () => {
 
     // check the value low or high 
 
-
-
     if(userGuess.length < maxGuess){
         if(userNumber > computerGuess) {
-            winner.play();
+            loser.play();
         userGuessUpdate.innerHTML = "Your guess is High 😮";
         userNumberUpdate.value = "";
     } else if (userNumber < computerGuess) {
@@ -55,6 +54,7 @@ const compareGuess = () => {
         userGuessUpdate.innerHTML = "Your guess is Low 😌";
         userNumberUpdate.value = "";
     } else {
+        winner.play();
        userGuessUpdate.innerHTML = "It's Correct 😀";
         userNumberUpdate.value = "";
     }
@@ -69,6 +69,7 @@ const compareGuess = () => {
         startNewGame();
 
     } else {
+        winner.play();
        userGuessUpdate.innerHTML = "It's Correct 😀";
         userNumberUpdate.value = "";
         startNewGame();
