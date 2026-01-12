@@ -24,7 +24,11 @@ const compareGuess = () => {
     document.getElementById("guesses").innerHTML = userGuess; 
 
     // check the value low or high 
-    if(userNumber > computerGuess) {
+
+
+
+    if(userGuess.length < maxGuess){
+        if(userNumber > computerGuess) {
         userGuessUpdate.innerHTML = "Your guess is High 😮";
         userNumberUpdate.value = "";
     } else if (userNumber < computerGuess) {
@@ -34,8 +38,21 @@ const compareGuess = () => {
        userGuessUpdate.innerHTML = "It's Correct 😀";
         userNumberUpdate.value = "";
     }
+    } else {
+        if(userNumber > computerGuess) {
+        userGuessUpdate.innerHTML = `You Loose!! correct number was $ {computerGuess}`;
+        userNumberUpdate.value = "";
+    } else if (userNumber < computerGuess) {
+        userGuessUpdate.innerHTML = `You Loose!! correct number was $ {computerGuess}`;
+        userNumberUpdate.value = "";
+    } else {
+       userGuessUpdate.innerHTML = "It's Correct 😀";
+        userNumberUpdate.value = "";
+    }
+    }
 
-}
+    document.getElementById("attempts").innerHTML = userGuess.length;
+};
 
 const easyMode = () => {
     maxGuess = 10;
