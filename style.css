@@ -156,3 +156,145 @@ input {
   font-size: 2rem;
   color: #ff0511;
 }
+
+/* Existing CSS remains the same up to here */
+
+/* ==================== Mobile Responsive Design ==================== */
+@media (max-width: 1024px) {
+  main {
+    width: 50vw;
+    padding: 1rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  img {
+    max-height: 18rem;
+    width: 95%;
+  }
+
+  button {
+    min-width: 22rem;
+    font-size: 1.4rem;
+    padding: 0.9rem 1rem;
+  }
+
+  input {
+    width: 200px;
+    padding: 1.5rem 0;
+    margin: 3rem 0;
+    font-size: 1.4rem;
+  }
+
+  .info p {
+    font-size: 2.2rem;
+  }
+
+  .info span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 70vw;
+    border-width: 0.6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  img {
+    max-height: 16rem;
+  }
+
+  button {
+    min-width: 18rem;
+    font-size: 1.3rem;
+    padding: 0.8rem 1rem;
+  }
+
+  input {
+    width: 180px;
+    padding: 1.2rem 0;
+    margin: 2.5rem 0;
+    font-size: 1.3rem;
+  }
+
+  .info p {
+    font-size: 2rem;
+  }
+
+  .info span {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    width: 90vw;
+    border-width: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  img {
+    max-height: 14rem;
+  }
+
+  button {
+    min-width: 14rem;
+    font-size: 1.2rem;
+    padding: 0.7rem 0.8rem;
+  }
+
+  input {
+    width: 150px;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .info p {
+    font-size: 1.8rem;
+  }
+
+  .info span {
+    font-size: 1.5rem;
+  }
+}
