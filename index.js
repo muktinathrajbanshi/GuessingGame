@@ -15,6 +15,12 @@ const startGame = () => {
     document.getElementById("gameArea").style.display = "block";
 }
 
+// reload the page 
+
+const newGameBegin = () => {
+    window.location.reload();
+}
+
 // start new game
 
 const startNewGame = () => {
