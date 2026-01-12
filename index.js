@@ -2,6 +2,8 @@ let computerGuess;
 let userGuess = [];
 let userGuessUpdate = document.getElementById("textOutput");
 let userNumberUpdate = document.getElementById("inputBox");
+let audio = new Audio("");
+
 
 const init = () => {
     computerGuess = Math.floor(Math.random() * 100);
@@ -18,6 +20,7 @@ const startGame = () => {
 // reload the page 
 
 const newGameBegin = () => {
+    audio.play();
     window.location.reload();
 }
 
@@ -31,7 +34,7 @@ const startNewGame = () => {
 // main logic of our app
 
 const compareGuess = () => {
-
+    audio.play();
     const userNumber = Number(document.getElementById("inputBox").value);
     userGuess = [...userGuess, userNumber];
     document.getElementById("guesses").innerHTML = userGuess; 
@@ -72,11 +75,13 @@ const compareGuess = () => {
 };
 
 const easyMode = () => {
+    audio.play();
     maxGuess = 10;
     startGame();
 }
 
 const hardMode = () => {
+    audio.play();
     maxGuess = 5;
     startGame();
 }
