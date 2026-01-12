@@ -26,10 +26,13 @@ const compareGuess = () => {
     // check the value low or high 
     if(userNumber > computerGuess) {
         userGuessUpdate.innerHTML = "Your guess is High 😮";
+        userNumberUpdate.value = "";
     } else if (userNumber < computerGuess) {
         userGuessUpdate.innerHTML = "Your guess is Low 😌";
+        userNumberUpdate.value = "";
     } else {
        userGuessUpdate.innerHTML = "It's Correct 😀";
+        userNumberUpdate.value = "";
     }
 
 }
