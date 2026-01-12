@@ -15,6 +15,13 @@ const startGame = () => {
     document.getElementById("gameArea").style.display = "block";
 }
 
+// start new game
+
+const startNewGame = () => {
+    document.getElementById("newGameButton").display = "inline";
+    userNumberUpdate.setAttribute("disabled", true);
+}
+
 // main logic of our app
 
 const compareGuess = () => {
@@ -40,14 +47,18 @@ const compareGuess = () => {
     }
     } else {
         if(userNumber > computerGuess) {
-        userGuessUpdate.innerHTML = `You Loose!! correct number was $ {computerGuess}`;
+        userGuessUpdate.innerHTML = `You Loose!! correct number was ${computerGuess}`;
         userNumberUpdate.value = "";
+        startNewGame();
     } else if (userNumber < computerGuess) {
-        userGuessUpdate.innerHTML = `You Loose!! correct number was $ {computerGuess}`;
+        userGuessUpdate.innerHTML = `You Loose!! correct number was ${computerGuess}`;
         userNumberUpdate.value = "";
+        startNewGame();
+
     } else {
        userGuessUpdate.innerHTML = "It's Correct 😀";
         userNumberUpdate.value = "";
+        startNewGame();
     }
     }
 
