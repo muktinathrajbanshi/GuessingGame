@@ -2,7 +2,9 @@ let computerGuess;
 let userGuess = [];
 let userGuessUpdate = document.getElementById("textOutput");
 let userNumberUpdate = document.getElementById("inputBox");
-let audio = new Audio("");
+let start = new Audio("./audio/start.wav");
+let loser = new Audio("./audio/loser.wav");
+let winner = new Audio("./audio/winner.wav");
 
 
 const init = () => {
@@ -20,7 +22,7 @@ const startGame = () => {
 // reload the page 
 
 const newGameBegin = () => {
-    audio.play();
+    start.play();
     window.location.reload();
 }
 
@@ -34,7 +36,7 @@ const startNewGame = () => {
 // main logic of our app
 
 const compareGuess = () => {
-    audio.play();
+    start.play();
     const userNumber = Number(document.getElementById("inputBox").value);
     userGuess = [...userGuess, userNumber];
     document.getElementById("guesses").innerHTML = userGuess; 
@@ -45,9 +47,11 @@ const compareGuess = () => {
 
     if(userGuess.length < maxGuess){
         if(userNumber > computerGuess) {
+            winner.play();
         userGuessUpdate.innerHTML = "Your guess is High 😮";
         userNumberUpdate.value = "";
     } else if (userNumber < computerGuess) {
+        loser.play();
         userGuessUpdate.innerHTML = "Your guess is Low 😌";
         userNumberUpdate.value = "";
     } else {
@@ -75,13 +79,13 @@ const compareGuess = () => {
 };
 
 const easyMode = () => {
-    audio.play();
+    start.play();
     maxGuess = 10;
     startGame();
 }
 
 const hardMode = () => {
-    audio.play();
+    start.play();
     maxGuess = 5;
     startGame();
 }
